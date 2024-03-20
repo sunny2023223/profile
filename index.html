@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 2vw;
+            background-color: #f6f6f6;
+            color: #333;
+        }
+
+        header {
+            background-color: #1ef245;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 10px;
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        section {
+            margin: 20px 0;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            margin-bottom: 15px;
+            color: #0f5bff;
+        }
+
+        p {
+            margin: 0 0 15px;
+            color: #555;
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+            color: #555;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            header {
+                padding: 15px;
+            }
+
+            section {
+                margin: 15px 0;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hobbies = document.querySelector('.hobbies ul');
+            const addHobbyButton = document.createElement('button');
+            addHobbyButton.textContent = 'Add Hobby';
+            addHobbyButton.addEventListener('click', function () {
+                const newHobby = prompt('Enter a new hobby:');
+                if (newHobby) {
+                    const newHobbyListItem = document.createElement('li');
+                    newHobbyListItem.textContent = newHobby;
+                    hobbies.appendChild(newHobbyListItem);
+                }
+            });
+            hobbies.parentElement.appendChild(addHobbyButton);
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Sunny Kumar</h1>
+        <h2>Web Developer</h2>
+    </header>
+    <section class="about">
+        <h3>About Me</h3>
+        <p>Hi, I'm Sunny Kumar, a web developer based in Allahbad, India. I create high-quality websites and web applications.</p>
+    </section>
+    <section class="education">
+        <h3>Education</h3>
+        <ul>
+            <li>Bachelor of Technology in Information Technology, Indian Institute of Information Technology, 2023 - 2027</li>
+        </ul>
+    </section>
+    <section class="skills">
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+    <section class="hobbies">
+        <h3>Hobbies</h3>
+        <ul>
+            <li>Traveling</li>
+            <li>Gaming</li>
+            <li>Shooting</li>
+        </ul>
+    </section>
+    <section class="contact">
+        <h3>Contact</h3>
+        <p>Email: iit2023223@iiita.ac.in</p>
+        <p>Phone: +91 96085 38876</p>
+    </section>
+ 
+</body>
+
+</html>
